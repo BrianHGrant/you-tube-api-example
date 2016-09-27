@@ -7,7 +7,7 @@ class Video < ApplicationRecord
       response = JSON.parse(RestClient::Request.new(
       method: :get,
       url: "https://www.googleapis.com/youtube/v3/videos",
-      headers: {params: { key: 'AIzaSyCDUUqDeIAy9_zVMugOIwzA1mgyb4nAGWM', id: '7LnBvuzjpr4', part: 'contentDetails'}}
+      headers: {params: { key: "insert api key here", id: '7LnBvuzjpr4', part: 'contentDetails'}}
       ).execute)
     rescue RestClient::BadRequest => error
       message = JSON.parse(error.response)['message']
